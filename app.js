@@ -11,7 +11,10 @@ const deliveryEl = document.getElementById("delivery-method");
 const confirmButtonEl = document.getElementById("confirm");
 
 let filterInputEl = document.getElementById("filterinput");
-let errorMessageEl = document.getElementById("errormsg");
+
+
+
+let succefullMessageEl = document.getElementById("successfull-msg");
 
 
 // Hämta data från fake store API
@@ -59,17 +62,15 @@ function buyProduct(){
 
   if(!name || !email || !address || !delivery){ 
       console.log("Name, Email, Deliver-method or Address is missing");
-      // Lägg till ett meddelande för att det saknas info som inte är ifyllt
+
+
+
 
       return;
   }
   const productId = productsInCartList.map(item => {
       return { "stringValue": item.id }
    
-    // Om det går igenom så ska en liten box där det står att ordern gick igenom
-
-
-
   });
 
   const data = {
@@ -108,9 +109,21 @@ function buyProduct(){
 .then(res => res.json())
 .then(data => console.log(data));
 
+
+// Succefull sned order message
+let succefullMessageEl = 
+`
+<p id="successfull-msg">  <i class='bx bxs-badge-check bx-sm'></i><br>"Successfully send order"</p>
+<br>
+`
+document.getElementById("successfull-msg").innerHTML = succefullMessageEl;
+
+
+// 5 seconds timeout
+
 setTimeout(() => {
   document.location.reload();
-}, 500);
+}, 5000);
 
 console.log(data)
 

@@ -64,7 +64,7 @@ function deleteBuyer(name){
 
     setTimeout(() => {
       document.location.reload();
-    }, 500);
+    }, 1000);
 
 
 }

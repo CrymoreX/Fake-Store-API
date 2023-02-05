@@ -36,6 +36,16 @@ h3{
   text-align: center;
 }
 
+
+#successfull-msg p {
+  color: #ff7e00;
+}
+
+.bxs-badge-check::before{
+  color: #ff7e00;
+}
+
+
 .navlist a{
     font-family: 'Poppins', sans-serif;
     color: azure;
