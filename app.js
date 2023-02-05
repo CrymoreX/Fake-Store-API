@@ -108,6 +108,10 @@ function buyProduct(){
 .then(res => res.json())
 .then(data => console.log(data));
 
+setTimeout(() => {
+  document.location.reload();
+}, 500);
+
 console.log(data)
 
 // Local Storage Clear funktion

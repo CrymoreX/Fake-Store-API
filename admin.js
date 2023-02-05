@@ -62,6 +62,11 @@ function deleteBuyer(name){
     .then(res => res.json())
     .then(data => console.log(data));
 
+    setTimeout(() => {
+      document.location.reload();
+    }, 500);
+
+
 }
 
 
