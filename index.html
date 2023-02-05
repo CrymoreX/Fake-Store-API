@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Fake Store Project</title>
+</head>
+<body>
+
+    
+<header>
+    <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="admin.html">Admin</a></li> 
+    </ul>
+   
+    <!-- CART LOGO -->
+    <div class="cart"> <i class='bx bxs-cart-alt bx-border'></i> <p id="count">0</p></div>
+
+    
+</header>
+
+<h1 data-heading="t">Store</h1> 
+    
+       
+
+    <!-- <button class="categoryButton" data-category="all">All Products</button>
+    <button class="categoryButton" data-category="electronics">Electronics</button>
+    <button class="categoryButton" data-category="jewelery">Jewelery</button>
+    <button class="categoryButton" data-category="men's clothing">Men's Clothing</button>
+    <button class="categoryButton" data-category="women's clothing">Women's Clothing</button> -->
+  
+
+            <div class="container">
+                <div id="root"></div>
+               <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h3 id="total"></h2>
+                </div>
+               </div>
+            </div>
+
+         
+            <div class="billing-box">
+                    <fieldset> <!-- Skapar en box runt infon inanför fieldset -->
+                        <legend class="p-box">Billing:</legend>
+                        <br>
+                        <div class="p-box">
+                        <label for="name">Name:</label>
+                        <br>
+                        <input type="text" name="name" placeholder="Name" id="name" required> 
+                        </div>
+                        <br>
+                        <div class="p-box">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" name="email" placeholder="Email" id="email" required> 
+                        </div>
+                        <br>
+        
+                        <div class="p-box">
+                        <label for="address">Address:</label> 
+                        <br>
+                        <input type="text" name="address" id="address" placeholder="Address" required> 
+                        </div>
+                        <br>
+
+                        <div class="p-box">
+                        <label>Delivery Options:</label>
+                        </div>
+                        <select name="delivery-method" id="delivery-method" required>
+
+                            <option value="" disabled selected >Choose alternative..
+                            <option value="Send home">Send home</option> 
+                            <option value="Collect in store">Collect in store</option> 
+                            <option value="UPS">UPS</option>  
+                           
+                        </select>
+                        <br><br>
+                        <button class="button" value= "Confirm" id="confirm"><span>Confirm</span></button>
+                        
+                        
+    </div>
+    
+    <!--Visar filter-->
+    <div class="filter-box">
+        <p>Categories: men's clothing, women's clothing, electronics or jewelery</p> <br>
+        <i class='bx bxs-search-alt-2 bx-sm'></i>
+        <input type="text" class="input-text" id="filterinput" placeholder="Search category...">
+       
+        
+    </div>
+
+    <br>
+    <!--Visar alla produkter på hemsidan-->
+    <section id="products"></section>
+
+
+
+   
+
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

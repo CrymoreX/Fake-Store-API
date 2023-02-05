@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+<body>
+
+    
+
+    <header>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>  
+        </ul>
+    </header>
+
+    <h1>Admin</h1>
+
+<!--Här ska alla produkter vi köpt visas-->
+
+<section id="admin"></section>
+    <br>
+   <h2>Change an order here.</h2> 
+   <h3>After filling the blanks click on "Update order"</h3>
+
+<br>
+<div class="box">
+<form>
+    <label for="name"> Name:</label>
+    <br>
+    <input type="text" name="name" id="nameadmin" placeholder="Change name here..." required>
+    <br><br>
+    <label for="adress">Address:</label>
+    <br>
+    <input type="text" name="address" id="addressadmin" placeholder="Change address here..." required>
+    <br><br>
+    <label for="email">Email:</label>
+    <br>
+    <input type="text" name="email" id="emailadmin" placeholder="Change email here..." required>
+    <br><br>
+    
+    <label for="">Product Ids:</label>
+    <br>
+    <input type="text" name="productidadmin" id="productidadmin" placeholder="Change product id...">
+    <br><br>
+    <label for="">Shipping:</label>
+    <br>
+    <select name="shipping-method" id="shipping-method" required>
+        <option value="" disabled selected >Choose alternative..
+        <option value="Send home">Send home</option> 
+        <option value="Collect in store">Collect in store</option> 
+        <option value="UPS">UPS</option>  
+    </select>
+    
+</form>
+</div>
+
+
+
+<script src="admin.js"></script>
+    
+</body>
+</html>
