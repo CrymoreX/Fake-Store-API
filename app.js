@@ -15,6 +15,7 @@ let filterInputEl = document.getElementById("filterinput");
 
 
 let succefullMessageEl = document.getElementById("successfull-msg");
+let errorMessageEl = document.getElementById("error-msg");
 
 
 // Hämta data från fake store API
@@ -61,11 +62,15 @@ function buyProduct(){
   const delivery = deliveryEl.value.trim();
 
   if(!name || !email || !address || !delivery){ 
-      console.log("Name, Email, Deliver-method or Address is missing");
 
+      //console.log("Name, Email, Deliver-method or Address is missing");
 
-
-
+      let errorMessageEl = 
+      `
+      <p id="error-msg">  <i class='bx bxs-error bx-sm'></i><br>"Name, Email, Deliver-method or Address is missing"</p>
+      <br>
+      `
+      document.getElementById("error-msg").innerHTML = errorMessageEl;
       return;
   }
   const productId = productsInCartList.map(item => {
@@ -110,7 +115,7 @@ function buyProduct(){
 .then(data => console.log(data));
 
 
-// Succefull sned order message
+// Succefull send order message
 let succefullMessageEl = 
 `
 <p id="successfull-msg">  <i class='bx bxs-badge-check bx-sm'></i><br>"Successfully send order"</p>

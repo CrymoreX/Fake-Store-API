@@ -38,12 +38,23 @@ h3{
 
 
 #successfull-msg p {
-  color: #ff7e00;
+  color: green;
 }
 
 .bxs-badge-check::before{
-  color: #ff7e00;
+  color: green;
 }
+
+#error-msg p {
+  color: red;
+}
+
+.bxs-error-circle::before{
+  color: red;
+}
+
+
+
 
 
 .navlist a{
