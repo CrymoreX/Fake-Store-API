@@ -200,7 +200,7 @@ function displaycart(a) {
 
 function filterProducts(){
   let filterValue = filterInputEl.value.toUpperCase();
-  let item = sectionEl.querySelectorAll(".box-product") // här kan det bli fel
+  let item = sectionEl.querySelectorAll(".box-product")
   //console.log(filterValue);
 
   for (let j = 0; j<item.length; j++) {
