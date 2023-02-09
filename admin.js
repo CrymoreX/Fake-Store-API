@@ -7,9 +7,6 @@ const addressAdminEl = document.getElementById("addressadmin");
 const emailAdminEl = document.getElementById("emailadmin");
 const productidAdminEl = document.getElementById("productidadmin");
 const shippingAdminEl = document.getElementById("shipping-method");
-
-
-
 const containerEl = document.getElementById("admin");
 
 
@@ -80,9 +77,6 @@ function updateBuyer(name){
     const productidAdmin = productidAdminEl.value;
     const shippingAdmin = shippingAdminEl.value;
     
-    
-
-
     const body = JSON.stringify(
 
         { "fields": {
@@ -127,4 +121,18 @@ function updateBuyer(name){
         .then(res => res.json())
         .then(data => console.log(data));
         console.log("Update complete!");
+
+        setTimeout(() => {
+          document.location.reload();
+        }, 1000);
+
+}
+
+// FUNKTION EXTRA FÖR ATT SPARA/UPPDATERA //
+
+function saveOrder() {
+
+
+
+
 }

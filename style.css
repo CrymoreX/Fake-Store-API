@@ -172,6 +172,10 @@ h3 {
   cursor: pointer;
   color: #ff7e00;
 }
+.button:hover{
+  cursor: pointer;
+  color: #ff7e00;
+}
 
 .filter-box {
   margin-left: 15%;
