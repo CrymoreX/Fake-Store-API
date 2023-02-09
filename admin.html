@@ -28,7 +28,13 @@
 
 <br>
 <div class="box">
-<form>
+    
+<form id="adminform">
+
+    <label for="id"> Order ID:</label>
+    <br>
+    <input type="text" name="userId" id="userId" placeholder="Change id here...">
+    <br><br>
     <label for="name"> Name:</label>
     <br>
     <input type="text" name="name" id="nameadmin" placeholder="Change name here..." required>
@@ -55,8 +61,14 @@
         <option value="UPS">UPS</option>  
     </select>
     <br><br>
-    <button class="button" value= "save" id="save"><span>Save</span></button>
+
+  
+
 </form>
+
+    <!--Add save button -->
+    <button class="button" value= "save" id="save"><span>Save</span></button>
+
 </div>
 
 
