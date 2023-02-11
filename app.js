@@ -12,16 +12,13 @@ const confirmButtonEl = document.getElementById("confirm");
 
 let filterInputEl = document.getElementById("filterinput");
 
-
-
+// MEDDELANDEN VID UTSKICK //
 let succefullMessageEl = document.getElementById("successfull-msg");
 let errorMessageEl = document.getElementById("error-msg");
 
 
 // Hämta data från fake store API
 fetch('https://fakestoreapi.com/products')
-
-
 .then((data)=>{
   return data.json();
 })
@@ -115,7 +112,7 @@ function buyProduct(){
 .then(data => console.log(data));
 
 
-// Succefull send order message
+// Successfull send order message
 let succefullMessageEl = 
 `
 <p id="successfull-msg">  <i class='bx bxs-badge-check bx-sm'></i><br>"Successfully send order"</p>
@@ -149,7 +146,7 @@ function addToCart (id, title, price, image) {
     image,
   });
 
-// Sparar produkterna i localStorage
+  // Sparar produkterna i localStorage
   localStorage.setItem("product", JSON.stringify(productsInCartList));
 
   displaycart();
@@ -215,10 +212,8 @@ function filterProducts(){
   }
 }
 
-
-
-
 // EVENTLYSSNARE //
+
 confirmButtonEl.addEventListener("click", buyProduct);
 filterInputEl.addEventListener("keyup",filterProducts);
 

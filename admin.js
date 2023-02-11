@@ -46,7 +46,7 @@ function adminProducts (orders) {
     }
 }
 
-// Funktionen för att ta bort en order -- Funkar!
+// FUNKTIONEN ATT TA BORT EN ORDER //
 
 function deleteBuyer(name){
         console.log("Succefully deleted buyer!");
@@ -68,7 +68,7 @@ function deleteBuyer(name){
 }
 
 
-// FUNKTION EXTRA FÖR ATT SPARA/UPPDATERA //
+// FUNKTION FÖR ATT SPARA/UPPDATERA //
 
   function editOrder(name) {
 
@@ -103,9 +103,6 @@ function deleteBuyer(name){
       console.log(nameInput.value);
       console.log(productIdsInput.value);
 
-      //let name = nameInput.value; 
-
-      //updateBuyer(name);
     
       function updateBuyer(){
 
@@ -170,7 +167,8 @@ function deleteBuyer(name){
            }, 1000);
 
     }
-  
+    
+    // EVENTLYSSNARE //
 
     saveButtonEl.addEventListener("click", updateBuyer);
   
